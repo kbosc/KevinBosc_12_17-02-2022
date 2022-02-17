@@ -10,92 +10,66 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-//   Legend
+  ResponsiveContainer,
 } from "recharts";
 
 
 export default function CharBar(props) {
     return (
-        <div width="100%" height="90%">
-            <BarChart className="bar-chart"
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 50,
-                    right: 0,
-                    left: 0,
-                    bottom: 25
-                }}
-                >
-                <CartesianGrid strokeDasharray="3 3"
-                    vertical={false}  
-                />
-                <XAxis 
-                    dataKey="name"
-                    tickLine={false}
-                    tick={{ fontSize: 14 }}
-                    dy={10} 
-                />
-                <YAxis 
-                    // dataKey="kilogram" 
-                    // yAxisId="left" 
-                    // stroke="#8884d8" 
-                    // interval="number"
-                    // allowDecimals={false}
-                    // domain={[this.props.mininumYaxisKg, this.props.maximumYaxisKg]}
-                    orientation="right" 
-                    tickLine={false}
-                    axisLine={false}
-                    tickCount={3}
-                    tick={{ fontSize: 14, fill: '#74798c'}}
-                />
-                <YAxis 
-                        // dataKey="calories" 
-                        // yAxisId="right" 
-                        // orientation="right" 
-                        stroke="#82ca9d" 
-                        hide={true} 
-                        // domain={[this.props.minimumYaxisKcal, this.props.maximumYaxisKcal]}
-                    />
-                <Tooltip  />
-                {/* <Legend /> */}
-                <Bar dataKey="weight" fill="#282D30" />
-                <Bar dataKey="Kcal" fill="#E60000" />
-            </BarChart>
-        </div>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart className="bar-chart"
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 50,
+            right: 0,
+            left: 0,
+            bottom: 25
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3"
+            vertical={false}  
+          />
+          <XAxis 
+            dataKey="name"
+            tickLine={false}
+            tick={{ fontSize: 14 }}
+            dy={10} 
+          />
+          <YAxis 
+            orientation="right" 
+            tickLine={false}
+            axisLine={false}
+            tickCount={3}
+            tick={{ fontSize: 14, fill: '#74798c'}}
+          />
+          <YAxis 
+            stroke="#82ca9d" 
+            hide={true} 
+          />
+          <Tooltip 
+            wrapperStyle={{ backgroundColor: "#E60000", width: "40px", height: "65px" }} 
+            labelStyle={{ color: "green" }}
+            itemStyle={{ color: "red", fontSize: "7px", fontWeight: "500", lineHeight: "24px" }}
+            // content={<CustomTooltip />}
+          />
+          <Bar dataKey="weight" fill="#282D30" radius={[50, 50, 0, 0]} maxBarSize={12} barGap={0} barCategoryGap={0} />
+          <Bar dataKey="Kcal" fill="#E60000" radius={[50, 50, 0, 0]} maxBarSize={12} barGap={0} barCategoryGap={0} />
+        </BarChart>
+      </ResponsiveContainer>
     );
 }
 
-// function getIntroOfPage(label) {
-//     if (label === '1') {
-//       return 'Page A is about mens clothing';
-//     } if (label === '2') {
-//       return 'Page B is about womens dress';
-//     } if (label === '3') {
-//       return 'Page C is about womens bag';
-//     } if (label === '4') {
-//       return 'Page D is about household goods';
-//     } if (label === '5') {
-//       return 'Page E is about food';
-//     } if (label === '6') {
-//       return 'Page F is about baby food';
-//     }
+// const CustomTooltip = ({ active, payload, label }) => {
+//   if (active && payload && payload.length) {
+//     return (
+//       <div className="custom-tooltip">
+//         <p> {`${payload[0].value} kg`}</p>
+//         <p> {`${payload[1].value} kCal`}</p>
+//       </div>
+//     );
 //   }
-// function CustomTooltip({ payload, label, active }) {
-//     if (active) {
-//       return (
-//         <div className="custom-tooltip">
-//           <p className="label">{`${label} : ${payload[0].value}`}</p>
-//           <p className="intro">{getIntroOfPage(label)}</p>
-//           <p className="desc">Anything you want can be displayed here.</p>
-//         </div>
-//       );
-//     }
-  
-//     return null;
-//   }
-
 const data = [
     {
       name: '1',

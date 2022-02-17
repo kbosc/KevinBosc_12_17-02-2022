@@ -2,6 +2,9 @@
 @import 'styles/base';
 @import './components/Header';
 @import './components/navbar';
-@import './pages/Home';
-@import './components/Charts/ChartBar';
+@import './pages/Dashboard';
 // @import 'styles/variables.scss'
+@import './components/Charts/ChartBar';
+@import './components/Charts/ChartLine';
+@import './components/Charts/ChartPie';
+@import './components/Charts/ChartRadar';
