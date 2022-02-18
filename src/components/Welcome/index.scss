@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.container-main__up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    & > * {
+        padding-bottom: 2rem;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        span {
+            color: $colorPrimary;
+        }  
+    }
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+}
