@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.container {
+display: flex;
+height: 91vh;
+width: 100vw;
+// height: 100vh;
+// min-height: calc("100vh - 91px");
+// min-height: calc(-51vh);
+// min-height: calc(91vh);
+    nav {
+        background-color: $colorSecondary;
+        width: 117px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10rem;
+        ul {
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            li {
+                cursor: pointer;
+            }
+        }
+        p {
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+        }
+    }
+}

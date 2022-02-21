@@ -1,11 +1,27 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-export default function ChartRadar(props) {
+export default function ChartRadar({data}) {
+  // console.log(data);
+  const spider = []
+  console.log(data);
+  // let performance = data.map((el) => {
+  //   {
+  //     subject: data.;
+  //     A: 120;
+  //     B: 110;
+  //     fullMark: 150,
+  //   },
+  // })
+
+  // const spider = data.map( person => ({ value: subject, text: person.name}))
+
+  //   console.log(spider);
+
     return (
         <div>
             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={dataMock}>
                 <PolarGrid radialLines={false} />
                 <PolarAngleAxis 
                     dataKey="subject"
@@ -30,7 +46,7 @@ export default function ChartRadar(props) {
     );
 }
 
-const data = [
+const dataMock = [
     {
       subject: 'Intensité',
       A: 120,

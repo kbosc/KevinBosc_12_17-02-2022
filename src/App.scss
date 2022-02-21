@@ -1,7 +1,7 @@
 @import 'styles/reset';
 @import 'styles/base';
 @import './components/Header';
-@import './components/navbar';
+@import './components/VerticalLayout';
 @import './pages/Dashboard';
 // @import 'styles/variables.scss'
 @import './components/Charts/ChartBar';
@@ -11,3 +11,6 @@
 @import './components/GraphTracker';
 @import './components/MacroTracker';
 @import './components/Welcome';
+@import './components/Loader';
+@import './components/Error';
+@import './components/Navigation/'

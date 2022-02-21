@@ -1,27 +1,34 @@
 import React from 'react';
-import Navbar from "../../components/Navbar";
-// import { ReactComponent as Calories } from "../../assets/calories.svg";
-// import { ReactComponent as Protein } from "../../assets/protein.svg";
-// import { ReactComponent as Carbs } from "../../assets/carbs.svg";
-// import { ReactComponent as Fat } from "../../assets/fat.svg";
-// import { ReactComponent as Dot } from "../../assets/dot.svg";
-// import ChartBar from "../../components/Charts/ChartBar";
-// import ChartLine from "../../components/Charts/ChartLine";
-// import ChartPie from "../../components/Charts/ChartPie";
-// import ChartRadar from "../../components/Charts/ChartRadar";
+import { useParams } from "react-router-dom";
+import GetData from "../../services/GetData";
 import MacroTracker from '../../components/MacroTracker';
 import GraphTracker from '../../components/GraphTracker';
 import Welcome from '../../components/Welcome';
+import Error from "../../components/Error";
+import Loader from "../../components/Loader";
 
-export default function Home(props) {
+export default function Dashboard(props) {
+    const { id } = useParams();
+    const userData = GetData(id, "user");
+    const activityData = GetData(id, "activity");
+    const averageData = GetData(id, "average");
+    const performanceData = GetData(id, "performance");
+
+    if (userData.isLoading) return <Loader />;
+    if (userData.error) return <Error />;
+
     return (
         <main>
-            <Navbar />
             <div className='container-main'>
-                <Welcome />
+                <Welcome data={userData} />
                 <div className='container-graph'>
-                    <GraphTracker />
-                    <MacroTracker />
+                    <GraphTracker 
+                        dataActivity={activityData} 
+                        dataAverage={averageData}
+                        dataPerformance={performanceData}
+                        dataUser={userData} 
+                    />
+                    <MacroTracker data={userData} />
                 </div>
             </div>
         </main>

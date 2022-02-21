@@ -4,7 +4,7 @@ import { ReactComponent as Swim } from "../../assets/swim.svg";
 import { ReactComponent as Bike } from "../../assets/bike.svg";
 import { ReactComponent as Weight } from "../../assets/weight.svg";
 
-export default function Navbar(props) {
+export default function VerticalLayout(props) {
     return (
         <nav>
             <ul>
@@ -17,4 +17,3 @@ export default function Navbar(props) {
         </nav>
     );
 }
-
