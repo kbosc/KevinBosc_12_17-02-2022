@@ -14,6 +14,7 @@ export default function Dashboard(props) {
     const averageData = GetData(id, "average");
     const performanceData = GetData(id, "performance");
 
+
     if (userData.isLoading) return <Loader />;
     if (userData.error) return <Error />;
 

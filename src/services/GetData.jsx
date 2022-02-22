@@ -18,8 +18,8 @@
  };
  
  export default function GetData(id, category) {
-   const env = "local";
-   const dataSrc = env === "local" ? `http://localhost:3000/user/${id}` : `http://localhost:3001/user/${id}`;
+   const env = 'local';
+   const dataSrc = env === "local" ? `http://localhost:3001/user/${id}` : `http://localhost:3000/user/${id}`;
    const extension = env === "local" ? `.json` : `/`;
  
    const path = (category) => {

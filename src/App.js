@@ -16,11 +16,7 @@ function App() {
             <Route path="/user/:id" element={<Dashboard />} />
             <Route path="/" element={<Navigation />} />
           </Routes>
-        </div>
-      {/* <Routes>
-      <Route path='/user/:id' element={<Dashboard />} />
-      <Route path="/" element={<Navigation />} />
-      </Routes> */}
+      </div>
     </div>
   );
 }

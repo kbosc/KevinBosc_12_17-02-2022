@@ -3,7 +3,6 @@
 @import './components/Header';
 @import './components/VerticalLayout';
 @import './pages/Dashboard';
-// @import 'styles/variables.scss'
 @import './components/Charts/ChartBar';
 @import './components/Charts/ChartLine';
 @import './components/Charts/ChartPie';
@@ -13,4 +12,8 @@
 @import './components/Welcome';
 @import './components/Loader';
 @import './components/Error';
-@import './components/Navigation/'
+@import './components/Navigation';
+@import './components/ContainerPie';
+@import './components/ContainerRadar';
+@import './components/ContainerBar';
+@import './components/ContainerLine';
