@@ -1,3 +1,9 @@
+/**
+ * Welcome message
+ * Rendering component of Welcome message
+ * @param {object} data - User's data fetched from external service
+ * @returns Bonjour firstName
+ */
 import React, { useState, useEffect } from 'react';
 import Loader from "../Loader";
 import Error from "../Error";

@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This repo contains all the front-end side of the dashboard SportSee.
+To start this project, you must download the Back-end provided by OpenClassRooms.
+https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
-In the project directory, you can run:
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Back-end : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
+* IDE : I recommend to use VSCode
+* NodeJS (version 12.18)
+* NPM or Yarn : I recommend to use Yarn
+If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
 
-### `npm test`
+### Installing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*  First follow the insctructions to get the back-end https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
-### `npm run build`
+* Fork the repository
+Clone it on your computer.
+The yarn or npm command will allow you to install the dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `yarn`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Executing program
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First launch the backend side of the project on the local port 3000
 
-### `npm run eject`
+### `yarn start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Wait until the magic happen on port 3000
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then switch to the Front-end directory and run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `yarn start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+It will ask to switch to free port 3001, type
 
-## Learn More
+### `y`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project run on local mocked data, for switching from mock to api, go to services/getData.jsx then change the "env" value to anything else (like "api")
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can go back to Home page by clicking "Accueil" in navigation bar and swap between users
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Help
 
-### Analyzing the Bundle Size
+If you get any issues, please add issue to the repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Tools
 
-### Making a Progressive Web App
+Kanban
+* https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Figma's model
+* https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1

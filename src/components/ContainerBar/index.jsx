@@ -1,3 +1,10 @@
+/**
+ * Activity chart
+ * Rendering component container with label and bar chart component 
+ * @param {object} data - User's data given by parent who fetched from external service
+ * @returns Container with label and bar chart component 
+ */
+
 import React from 'react';
 import { ReactComponent as Dot } from "../../assets/dot.svg";
 import ChartBar from "../../components/Charts/ChartBar";

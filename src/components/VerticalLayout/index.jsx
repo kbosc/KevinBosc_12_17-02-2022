@@ -1,3 +1,7 @@
+/**
+ * Rendering component VerticalLayout
+ */
+
 import React from 'react';
 import { ReactComponent as Yogi } from "../../assets/yogi.svg";
 import { ReactComponent as Swim } from "../../assets/swim.svg";

@@ -1,13 +1,15 @@
 @import "../../../styles/variables.scss";
 
 .custom-tooltip-line {
-    // padding: 5px;
-    // background-color: green;
-    color: black;
-    // width: 45px;
-    // height: 20px;
+    width: 45px;
+    height: 20px;
     p {
-        background-color: green;
+        background-color: white;
         color: black;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
     }
 }

@@ -1,7 +1,22 @@
+/**
+ * Performance chart
+ * Rendering component container with label and radar chart component
+ * @param {object} data - User's data given by parent who fetched from external service
+ * @returns Container with label and radar chart component 
+ */
 import React, { useState, useEffect } from 'react';
 import Loader from "../Loader";
 import Error from "../Error";
 import ChartRadar from "../../components/Charts/ChartRadar";
+import PropTypes from "prop-types";
+
+ContainerRadar.propTypes = {
+  data: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool,
+    data: PropTypes.object,
+  }).isRequired,
+};
 
 export default function ContainerRadar({data}) {
     const [userData, setUserData] = useState({});

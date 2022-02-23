@@ -1,3 +1,8 @@
+/**
+ * @function - Creating dashboard using external service for fetch 
+ * @param {number} id - ID of the user given by the URL
+ * @author Kevin Bosc <bosc.kev@gmail.com>
+ */
 import React from 'react';
 import { useParams } from "react-router-dom";
 import GetData from "../../services/GetData";

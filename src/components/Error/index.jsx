@@ -1,3 +1,8 @@
+/**
+ * Simple Error message
+ * Rendering component ErrorData
+ */
+
 import React from "react";
 
 export default function ErrorData() {

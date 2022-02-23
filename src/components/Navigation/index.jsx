@@ -1,3 +1,9 @@
+/**
+ * First Page for developpers
+ * Easy switch between Users
+ * @Link is used to navigate to Dashboard
+ */
+
 import { Link } from "react-router-dom";
 
 export default function Navigation() {
