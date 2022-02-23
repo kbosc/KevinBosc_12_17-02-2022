@@ -20,7 +20,7 @@ export default function ContainerPie({data}) {
             <ChartPie data={userData}/>
             <p className='container-graph__left__bottom__pie__title'>Score</p>
             <p className='container-graph__left__bottom__pie__goal'>
-                <span>{userData?.todayScore * 100}%</span>
+                <span>{userData?.todayScore * 100 }%</span>
                 de votre objectif
             </p>
         </div>

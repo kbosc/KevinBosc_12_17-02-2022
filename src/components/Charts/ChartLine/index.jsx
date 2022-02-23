@@ -3,6 +3,9 @@ import Loader from "../../Loader";
 import Error from "../../Error";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
+
+
+
 export default function ChartLine({data}) {
   const [userData, setUserData] = useState({});
 
@@ -14,8 +17,6 @@ export default function ChartLine({data}) {
   
   if (data.isLoading) return <Loader />;
   if (data.error) return <Error />;
-
-  // console.log(userData.sessions);
 
   const arrayDataModifiedForRecharts = []
 
@@ -30,11 +31,15 @@ export default function ChartLine({data}) {
       })
     });
   }
-  // console.log(userData.sessions);
 
     function CustomTooltip({ payload, active }) {
-      if (active) {
-        return <p className="custom-tooltip-line">{payload[0].value} min</p>;
+      if (active && payload && payload.length) {
+        return (
+          <div className="custom-tooltip-line">
+            <p>{`${payload[0].value} min`}</p>
+          </div>
+        );
+        // return <p className="custom-tooltip-line">{payload[0].value} min</p>;
       }
       return null;
     }
@@ -94,12 +99,12 @@ export default function ChartLine({data}) {
         //     // fontWeight: "500", 
         //     // lineHeight: "24px",
         // }}
-        // content={`${userData.sessionLength} min`}
+        // // content={`${userData.sessionLength} min`}
         cursor={{
             stroke: "rgba(0, 0, 0, 0.1)",
-            strokeWidth: 79,
+            strokeWidth: 79
         }}
-        content={<CustomTooltip/>}
+        content={CustomTooltip}
         />
         <Line 
         type="monotone" 
