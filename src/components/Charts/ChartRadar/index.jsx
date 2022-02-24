@@ -37,8 +37,7 @@ export default function ChartRadar({data}) {
         stroke="white"
         tickLine={false}
         tick={{
-            dy: 3,
-            fontSize: 12,
+            fontSize: 10,
             fontWeight: 500,
         }}
         />

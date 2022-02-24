@@ -9,6 +9,15 @@ import { ReactComponent as Calories } from "../../assets/calories.svg";
 import { ReactComponent as Protein } from "../../assets/protein.svg";
 import { ReactComponent as Carbs } from "../../assets/carbs.svg";
 import { ReactComponent as Fat } from "../../assets/fat.svg";
+import PropTypes from "prop-types";
+
+MacroTracker.propTypes = {
+    data: PropTypes.shape({
+      isLoading: PropTypes.bool,
+      error: PropTypes.bool,
+      data: PropTypes.object,
+    }).isRequired,
+  };
 
 export default function MacroTracker({data}) {
     const [userData, setUserData] = useState({});

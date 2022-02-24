@@ -8,6 +8,15 @@
 import React from 'react';
 import { ReactComponent as Dot } from "../../assets/dot.svg";
 import ChartBar from "../../components/Charts/ChartBar";
+import PropTypes from "prop-types";
+
+ContainerBar.propTypes = {
+    data: PropTypes.shape({
+      isLoading: PropTypes.bool,
+      error: PropTypes.bool,
+      data: PropTypes.object,
+    }).isRequired,
+  };
 
 export default function ContainerBar({data}) {
     return (

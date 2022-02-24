@@ -39,22 +39,12 @@ export default function ChartBar({ data }) {
   
   if (data.isLoading) return <Loader />;
   if (data.error) return <Error />;
-  
-  // const arrayDataModifiedForRecharts = []
 
-  // userData.sessions.forEach((item, index) => {
-  //     arrayDataModifiedForRecharts.push({
-  //       name: index + 1,
-  //       weight: item.kilogram,
-  //       Kcal: item.calories,
-  //     })
-  //   });
-  
-  //   console.log(userData.sessions);
-
-
-  
-  const CustomTooltip = ({ active, payload, label }) => {
+  /**
+   * @param {bool} active
+   * @param {Array} payload
+  */
+  const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -66,6 +56,10 @@ export default function ChartBar({ data }) {
     return null;
   };
   
+  /**
+   * 
+   * @param {number} tickItem 
+   */
   const formatXAxis = (tickItem) => {
     return tickItem + 1;
   };

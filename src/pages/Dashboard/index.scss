@@ -5,6 +5,7 @@ main {
 }
 .container-main {
     padding: 3rem;
+    padding-bottom: 0;
     width: 100%;
     height: 100%;
 }
@@ -14,6 +15,4 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    gap: 2rem;
 }
-

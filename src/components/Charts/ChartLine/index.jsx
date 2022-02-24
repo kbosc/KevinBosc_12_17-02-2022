@@ -47,6 +47,10 @@ export default function ChartLine({data}) {
     });
   }
 
+  /**
+   * @param {Array} payload
+   * @param {bool} active
+  */
   function CustomTooltip({ payload, active }) {
     if (active && payload && payload.length) {
       return (

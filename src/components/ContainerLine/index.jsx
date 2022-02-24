@@ -7,6 +7,15 @@
 
 import React from 'react';
 import ChartLine from "../../components/Charts/ChartLine";
+import PropTypes from "prop-types";
+
+ContainerLine.propTypes = {
+  data: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool,
+    data: PropTypes.object,
+  }).isRequired,
+};
 
 function ContainerLine({data}) {
     return (

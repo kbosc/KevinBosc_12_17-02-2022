@@ -3,7 +3,6 @@
  * @param {number} id - ID of the user given by the URL
  * @author Kevin Bosc <bosc.kev@gmail.com>
  */
-import React from 'react';
 import { useParams } from "react-router-dom";
 import GetData from "../../services/GetData";
 import MacroTracker from '../../components/MacroTracker';
@@ -12,7 +11,7 @@ import Welcome from '../../components/Welcome';
 import Error from "../../components/Error";
 import Loader from "../../components/Loader";
 
-export default function Dashboard(props) {
+export default function Dashboard() {
     const { id } = useParams();
     const userData = GetData(id, "user");
     const activityData = GetData(id, "activity");
