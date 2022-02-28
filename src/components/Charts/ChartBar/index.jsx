@@ -106,13 +106,11 @@ export default function ChartBar({ data }) {
       />
       <Bar yAxisId="right" dataKey="kilogram" fill="black" radius={[50, 50, 0, 0]} maxBarSize={12} 
       onMouseOver={(data) => {
-        console.log('data', data)
         setBarGraphData(data)
       }}
       />
       <Bar yAxisId="left" dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} maxBarSize={12}
       onMouseOver={(data) => {
-        console.log('data', data)
         setBarGraphData(data)
       }}
        />
