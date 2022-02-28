@@ -18,7 +18,7 @@ export default function ChartRadar({data}) {
   
   if (data && data.data) {
     data.data.reverse();
-
+    
     data.data.forEach((item) => {
       arrayDataModifiedForRecharts.push({
         subject: data.kind[item.kind],
@@ -42,7 +42,6 @@ export default function ChartRadar({data}) {
         }}
         />
         <Radar 
-          name="Mike" 
           dataKey="A"
           fill="#ff0101"
           fillOpacity={0.7}

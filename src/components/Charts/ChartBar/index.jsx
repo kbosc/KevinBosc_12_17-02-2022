@@ -29,6 +29,7 @@ ChartBar.propTypes = {
 
 
 export default function ChartBar({ data }) {
+  let [barGraphData, setBarGraphData] = useState({})
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
@@ -96,14 +97,25 @@ export default function ChartBar({ data }) {
       tickSize="50"
       />
       <Tooltip
+      position={{ x: barGraphData.x + 50, y: barGraphData.y - 80 }}
       cursor={{
           fill: "#C4C4C4",
           fillOpacity: "0.5",
       }}
       content={<CustomTooltip />}
       />
-      <Bar yAxisId="right" dataKey="kilogram" fill="black" radius={[50, 50, 0, 0]} maxBarSize={12} />
-      <Bar yAxisId="left" dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} maxBarSize={12} />
+      <Bar yAxisId="right" dataKey="kilogram" fill="black" radius={[50, 50, 0, 0]} maxBarSize={12} 
+      onMouseOver={(data) => {
+        console.log('data', data)
+        setBarGraphData(data)
+      }}
+      />
+      <Bar yAxisId="left" dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} maxBarSize={12}
+      onMouseOver={(data) => {
+        console.log('data', data)
+        setBarGraphData(data)
+      }}
+       />
       </BarChart>
     </ResponsiveContainer>
   );
